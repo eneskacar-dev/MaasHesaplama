@@ -42,7 +42,7 @@ public class Employee {
         }
         return 0;
     }
-
+    //ToString Methodu Overrride edilecek
     @Override
     public String toString() {
         
