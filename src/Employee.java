@@ -5,20 +5,21 @@ public class Employee {
     double salary;
     int workHours;
     int hireYear;
-
+    //Yapıcı metod
     Employee(String name, double salary, int workHours, int hireYear){
         this.name = name;
         this.salary = salary;
         this.workHours = workHours;
         this.hireYear = hireYear;
     }
-
+    //Vergi hesaplaması
     public double tax(){
         if(this.salary < 1000){
             return 0;
         } 
         return (this.salary)*0.03;
     }
+    //Bonus hesaplaması
     public int bonus(){
         var extraWorkHours = this.workHours-40;
 
@@ -28,6 +29,7 @@ public class Employee {
         return extraWorkHours * 30;
     }
 
+    //Kıdem yılına göre zam hesaplaması
     public double raiseSalary(){        
         var workYear = 2021 - this.hireYear;
 
